@@ -129,7 +129,6 @@ export default function Question() {
             <div className="flex flex-col items-center justify-center space-y-6">
                 <ToastContainer
                     className="toast-container"
-                    position="top-center"
                 />
 
                 <img

@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ICompany } from "@/Interfaces";
 import useProblems from "@/hooks/useProblems";
 import { getCorrectAnswers, getWrongAnswers, resetGame } from "@/data/scoreStore";
+import Confetti from "react-confetti";
 
 export default function Game() {
     const [alertCompany, setAlertCompany] = useState<number | null>(null);
@@ -129,14 +130,35 @@ export default function Game() {
 
     if (isGameOver) {
         return (
-            <div className="h-screen bg-gradient-to-r from-blue-700 to-green-800 flex flex-col items-center justify-center gap-4 p-4">
-                <h2 className="text-2xl font-bold">Jogo Finalizado</h2>
-                <p className="text-black font-bold">Total de Questões: {totalQuestions}</p>
-                <p className="text-green-500 font-bold">Acertos: {totalCorrect} ({correctPercentage.toFixed(2)}%)</p>
-                <p className="text-red-500 font-bold">Erros: {totalWrong} ({wrongPercentage.toFixed(2)}%)</p>
+            <div className="relative h-screen bg-gradient-to-r from-blue-700 to-green-800 flex flex-col items-center justify-center gap-4 p-4">
+                {/* Animação de fogos de artifício */}
+                <Confetti
+                    width={window.innerWidth}
+                    height={window.innerHeight}
+                    recycle={false} // Apenas dispara uma vez
+                    numberOfPieces={500} // Número de pedaços do confete
+                    gravity={0.05} // Velocidade do confete caindo
+                />
+
+                <h2 className="text-4xl font-extrabold text-white animate-pulse">
+                    🎉 Jogo Finalizado 🎉
+                </h2>
+
+                <div className="bg-white rounded-lg shadow-md p-6 text-center">
+                    <p className="text-xl font-bold text-black">
+                        Total de Questões: <span className="text-blue-600">{totalQuestions}</span>
+                    </p>
+                    <p className="text-xl font-bold text-green-500">
+                        Acertos: {totalCorrect} ({correctPercentage.toFixed(2)}%)
+                    </p>
+                    <p className="text-xl font-bold text-red-500">
+                        Erros: {totalWrong} ({wrongPercentage.toFixed(2)}%)
+                    </p>
+                </div>
+
                 <button
                     onClick={handleResetGame}
-                    className="mt-4 px-6 py-2 bg-purple-600 text-white font-bold rounded-md hover:bg-purple-700"
+                    className="mt-4 px-6 py-2 bg-purple-600 text-white font-bold rounded-md shadow-lg hover:bg-purple-700 hover:scale-105 transition-transform"
                 >
                     Reiniciar Jogo
                 </button>
@@ -145,14 +167,35 @@ export default function Game() {
     }
 
     return (
-        <div className="h-screen bg-gradient-to-r from-blue-700 to-green-800 flex flex-col items-center gap-6 p-6">
+        <div className="h-svh bg-gradient-to-r from-blue-700 to-green-800 flex flex-col items-center gap-6 p-6">
             <button
                 onClick={handleResetGame}
                 className="px-8 py-3 bg-purple-600 text-white font-bold rounded-md hover:bg-purple-700 transition duration-300"
             >
                 Reiniciar Jogo
             </button>
-            <div className="flex flex-wrap justify-center gap-6 mt-6">
+            <div
+                className="fixed top-4 left-4 w-52 h-52 bg-gradient-to-r from-green-500 to-blue-500 flex flex-col items-center justify-center rounded-lg shadow-lg text-white text-center border-4 border-white"
+            >
+                <h3 className="text-lg font-bold">Placar</h3>
+                <p className="text-3xl font-extrabold mt-2">
+                    {totalCorrect}
+                    <span className="text-sm font-normal ml-1">Acertos</span>
+                </p>
+                <p className="text-lg font-bold mt-2">
+                    ({correctPercentage.toFixed(2)}%)
+                </p>
+                <p className="text-3xl font-extrabold mt-4">
+                    {totalWrong}
+                    <span className="text-sm font-normal ml-1">Erros</span>
+                </p>
+                <p className="text-lg font-bold mt-2">
+                    ({wrongPercentage.toFixed(2)}%)
+                </p>
+            </div>
+
+
+            <div className="flex flex-wrap justify-center gap-6 mt-6 w-2/3">
                 {companies.map((company) => {
                     const stats = getQuestionStats(company.id);
 
