@@ -129,14 +129,14 @@ export default function Game() {
 
     if (isGameOver) {
         return (
-            <div className="h-screen bg-gray-200 flex flex-col items-center justify-center gap-4 p-4">
+            <div className="h-screen bg-gradient-to-r from-blue-700 to-green-800 flex flex-col items-center justify-center gap-4 p-4">
                 <h2 className="text-2xl font-bold">Jogo Finalizado</h2>
-                <p>Total de Questões: {totalQuestions}</p>
-                <p>Acertos: {totalCorrect} ({correctPercentage.toFixed(2)}%)</p>
-                <p>Erros: {totalWrong} ({wrongPercentage.toFixed(2)}%)</p>
+                <p className="text-black font-bold">Total de Questões: {totalQuestions}</p>
+                <p className="text-green-500 font-bold">Acertos: {totalCorrect} ({correctPercentage.toFixed(2)}%)</p>
+                <p className="text-red-500 font-bold">Erros: {totalWrong} ({wrongPercentage.toFixed(2)}%)</p>
                 <button
                     onClick={handleResetGame}
-                    className="mt-4 px-6 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600"
+                    className="mt-4 px-6 py-2 bg-purple-600 text-white font-bold rounded-md hover:bg-purple-700"
                 >
                     Reiniciar Jogo
                 </button>
@@ -145,14 +145,14 @@ export default function Game() {
     }
 
     return (
-        <div className="h-screen bg-gray-200 flex flex-col items-center gap-4 p-4">
+        <div className="h-screen bg-gradient-to-r from-blue-700 to-green-800 flex flex-col items-center gap-6 p-6">
             <button
                 onClick={handleResetGame}
-                className="mb-4 px-6 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600"
+                className="px-8 py-3 bg-purple-600 text-white font-bold rounded-md hover:bg-purple-700 transition duration-300"
             >
                 Reiniciar Jogo
             </button>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-6 mt-6">
                 {companies.map((company) => {
                     const stats = getQuestionStats(company.id);
 
@@ -160,21 +160,25 @@ export default function Game() {
                         <div
                             key={company.id}
                             onClick={() => handleCompanyClick(company.id)}
-                            className={`w-40 h-40 border-2 rounded-md flex flex-col justify-center items-center cursor-pointer 
+                            className={`w-56 h-56 border-4 rounded-xl flex flex-col justify-center items-center cursor-pointer transition-all 
                             ${disabledCompanies.includes(company.id)
                                     ? "border-gray-500 opacity-50 cursor-not-allowed"
                                     : alertCompany === company.id
-                                        ? "border-red-500 animate-pulse"
-                                        : "border-gray-500"
+                                        ? "border-red-600 animate-bounce"
+                                        : "border-transparent hover:border-white"
                                 }`}
                         >
-                            <img src={company.image} alt={company.name} className="w-20 h-20 mb-2" />
-                            <span className="text-lg font-bold">{company.name}</span>
-                            <span className="text-sm mt-1">
+                            <img
+                                src={company.image}
+                                alt={company.name}
+                                className="w-24 h-24 mb-3 rounded-full shadow-lg transform transition duration-300 hover:scale-110"
+                            />
+                            <span className="text-xl font-semibold text-white">{company.name}</span>
+                            <span className="text-sm text-white mt-2">
                                 {stats.answered}/{stats.total} questões
                             </span>
-                            <span className="text-xs text-green-600">Acertos: {stats.correct}</span>
-                            <span className="text-xs text-red-600">Erros: {stats.wrong}</span>
+                            <span className="text-xs text-green-500 font-bold">Acertos: {stats.correct}</span>
+                            <span className="text-xs text-red-500 font-bold">Erros: {stats.wrong}</span>
                         </div>
                     );
                 })}

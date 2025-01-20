@@ -1,187 +1,332 @@
 [
   {
     "id": 1,
-    "name": "Escola",
+    "name": "Facebook",
     "problems": [
       {
         "id": 1,
-        "description": "A página de matrícula trava quando o aluno tenta enviar documentos em PDF.",
+        "description": "O usuário estava criando um post e tentou adicionar uma imagem, mas apareceu a mensagem de ‘Erro ao adicionar imagem!!'. No entanto, a mensagem não explicou o que deu errado, deixando o usuário sem saber como corrigir o problema ou o que precisa fazer para resolver.",
         "options": [
-          "Controle e liberdade do usuário",
-          "Prevenção de erros",
-          "Design estético e minimalista",
-          "Flexibilidade e eficiência de uso"
-        ],  
-        "answer": "Prevenção de erros"
+          "Visibilidade do Status do Sistema",
+          "Correspondência entre o Sistema e o Mundo Real",
+          "Ajuda aos Usuários para Reconhecer, Diagnosticar e Recuperar de Erros",
+          "Consistência e Padrões"
+        ],
+        "answer": "Ajuda aos Usuários para Reconhecer, Diagnosticar e Recuperar de Erros",
+        "imageQuestion": "/problemas/facebook_p1.png"
       },
       {
         "id": 2,
-        "description": "O formulário de cadastro de alunos não informa quais campos são obrigatórios.",
+        "description": "O usuário estava navegando em uma postagem sobre uma oportunidade no IFMG, mas notou que o ícone de curtir estava com um polegar para baixo, o que é incomum, já que normalmente o polegar para cima é usado para curtir ou aprovar. Isso gerou confusão, pois o usuário não sabia se o ícone significava o que normalmente é associado ao curtir, dificultando a interação.",
         "options": [
-          "Visibilidade do status do sistema",
-          "Prevenção de erros",
-          "Consistência e padrões",
-          "Ajuda e documentação"
+          "Visibilidade do Status do Sistema e Controle e Liberdade do Usuário",
+          "Correspondência entre o Sistema e o Mundo Real e Consistência e Padrões",
+          "Flexibilidade e Eficiência de Uso e Prevenção de Erros",
+          "Estética e Design Minimalista e Reconhecimento ao Invés de Memorização"
         ],
-        "answer": "Prevenção de erros"
+        "answer": "Correspondência entre o Sistema e o Mundo Real e Consistência e Padrões",
+        "imageQuestion": "/problemas/facebook_p2.png"
       },
       {
         "id": 3,
-        "description": "O menu principal está escondido atrás de vários cliques, dificultando o acesso a informações importantes.",
+        "description": "O usuário estava tentando confirmar algumas solicitações de amizade no Facebook, mas percebeu que os botões de Confirmar estavam com cores diferentes. Isso gerou confusão, pois o usuário não sabia se as cores significavam algo diferente ou se as ações eram iguais. No final, o usuário clicou sem ter certeza se estava fazendo a ação certa. O usuário acredita que manter os botões com a mesma cor ajudaria a tornar o processo mais claro.",
         "options": [
-          "Reconhecimento em vez de memorização",
-          "Flexibilidade e eficiência de uso",
-          "Controle e liberdade do usuário",
-          "Visibilidade do status do sistema"
+          "Consistência e Padrões",
+          "Visibilidade do Status do Sistema",
+          "Ajuda aos Usuários para Reconhecer, Diagnosticar e Recuperar de Erros",
+          "Prevenção de Erros"
         ],
-        "answer": "Reconhecimento em vez de memorização"
+        "answer": "Consistência e Padrões",
+        "imageQuestion": "/problemas/facebook_p3.png"
+      },
+      {
+        "id": 4,
+        "description": "O usuário estava acessando a seção de Vídeos no Facebook e percebeu que, ao tentar visualizar seus vídeos, só encontrou a opção de Ver vídeo. Não havia outras opções comuns, como editar ou excluir o vídeo, o que deixou o usuário sem controle sobre seu conteúdo. Isso o fez sentir que estava limitado nas interações com o sistema.",
+        "options": [
+          "Visibilidade do Status do Sistema",
+          "Controle e Liberdade do Usuário",
+          "Consistência e Padrões",
+          "Prevenção de Erros"
+        ],
+        "answer": "Controle e Liberdade do Usuário",
+        "imageQuestion": "/problemas/facebook_p4.png"
       }
     ],
-    "image": "escola.jpg"
+    "image": "/logos/facebook_logo.png"
   },
   {
     "id": 2,
-    "name": "Hospital",
+    "name": "Sistema IFMG",
     "problems": [
-      {
-        "id": 4,
-        "description": "O site não possui confirmação de agendamento de consulta, o que causa confusão.",
-        "options": [
-          "Visibilidade do status do sistema",
-          "Ajuda e documentação",
-          "Prevenção de erros",
-          "Consistência e padrões"
-        ],
-        "answer": "Visibilidade do status do sistema"
-      },
       {
         "id": 5,
-        "description": "Não há botão para voltar na página de resultados de exames.",
+        "description": "O usuário estava tentando acessar a sessão de ajuda sobre como enviar apresentações para a conferência, mas a explicação estava confusa. Embora o texto falasse sobre como agendar apresentações, o usuário não entendia claramente o que precisava fazer nem como acessar o processo corretamente. A falta de uma orientação mais direta ou um passo a passo específico deixou o usuário perdido.",
         "options": [
-          "Controle e liberdade do usuário",
-          "Flexibilidade e eficiência de uso",
-          "Consistência e padrões",
-          "Reconhecimento em vez de memorização"
+          "Prevenção de Erros",
+          "Ajuda aos Usuários para Reconhecer, Diagnosticar e Recuperar de Erros",
+          "Ajuda e Documentação",
+          "Consistência e Padrões"
         ],
-        "answer": "Controle e liberdade do usuário"
-      }
-    ],
-    "image": "hospital.jpg"
-  },
-  {
-    "id": 3,
-    "name": "Banco",
-    "problems": [
+        "answer": "Ajuda e Documentação",
+        "imageQuestion": "/problemas/ifmg_p1.png"
+      },
       {
         "id": 6,
-        "description": "O aplicativo não informa o motivo de um pagamento não ter sido aprovado.",
+        "description": "O usuário estava tentando fazer login no sistema, mas apareceu uma mensagem de erro que mostrava uma série de códigos como ERR_7891...INVALID_ACTION-DATA_560X. A mensagem não explicava de forma clara o que deu errado, e o usuário não sabia como corrigir o problema. O erro parecia técnico demais, sem nenhuma dica de como proceder ou resolver a situação.",
         "options": [
-          "Prevenção de erros",
-          "Ajuda e documentação",
-          "Reconhecimento em vez de memorização",
-          "Visibilidade do status do sistema"
+          "Visibilidade do Status do Sistema",
+          "Ajuda aos Usuários para Reconhecer, Diagnosticar e Recuperar de Erros",
+          "Consistência e Padrões",
+          "Estética e Design Minimalista"
         ],
-        "answer": "Ajuda e documentação"
+        "answer": "Ajuda aos Usuários para Reconhecer, Diagnosticar e Recuperar de Erros",
+        "imageQuestion": "/problemas/ifmg_p2.png"
       },
       {
         "id": 7,
-        "description": "O site não possui um botão de sair, o que dificulta a saída do usuário.",
+        "description": "O usuário estava navegando no Sistema Online de Conferências do IFMG e percebeu que os links de 'Acessar a Conferência' estavam sendo exibidos de maneira totalmente diferentes. Eles estavam em diferentes estilos e cores ao longo da página, o que criou confusão. O usuário esperava que todos os links tivessem o mesmo estilo para tornar a navegação mais fluida e intuitiva, mas isso não aconteceu.",
         "options": [
-          "Controle e liberdade do usuário",
-          "Flexibilidade e eficiência de uso",
-          "Consistência e padrões",
-          "Reconhecimento em vez de memorização"
+          "Visibilidade do Status do Sistema",
+          "Consistência e Padrões",
+          "Ajuda e Documentação",
+          "Controle e Liberdade do Usuário"
         ],
-        "answer": "Controle e liberdade do usuário"
-      }
-    ],
-    "image": "banco.jpg"
-  },
-  {
-    "id": 4,
-    "name": "E-commerce",
-    "problems": [
-      {
-        "id": 8,
-        "description": "O site não informa o prazo de entrega dos produtos.",
-        "options": [
-          "Visibilidade do status do sistema",
-          "Ajuda e documentação",
-          "Prevenção de erros",
-          "Reconhecimento em vez de memorização"
-        ],
-        "answer": "Visibilidade do status do sistema"
+        "answer": "Consistência e Padrões",
+        "imageQuestion": "/problemas/ifmg_p3.png"
       },
       {
-        "id": 9,
-        "description": "O botão de adicionar ao carrinho não é visível na página de produtos.",
+        "id": 8,
+        "description": "O usuário estava acessando a seção de Apresentações e Autores no Sistema de Conferências do IFMG e percebeu que a página estava sobrecarregada com muitas informações e links, sem uma organização clara. A quantidade de texto e opções de pesquisa deixavam a navegação confusa, tornando difícil encontrar o que procurava. A interface poderia ser mais limpa e objetiva.",
         "options": [
-          "Controle e liberdade do usuário",
-          "Flexibilidade e eficiência de uso",
-          "Consistência e padrões",
-          "Reconhecimento em vez de memorização"
+          "Prevenção de Erros",
+          "Estética e Design Minimalista",
+          "Visibilidade do Status do Sistema",
+          "Ajuda e Documentação"
         ],
-        "answer": "Visibilidade do status do sistema"
+        "answer": "Estética e Design Minimalista",
+        "imageQuestion": "/problemas/ifmg_p4.png"
       }
     ],
-    "image": "ecommerce.jpg"
+    "image": "/logos/ifmg_logo.png"
   },
   {
-    "id": 5,
-    "name": "Transporte",
+    "id": 3,
+    "name": "Mercado Livre",
     "problems": [
       {
-        "id": 10,
-        "description": "O aplicativo não informa o motivo de um pagamento não ter sido aprovado.",
+        "id": 9,
+        "description": "O usuário estava navegando pelo menu lateral da sua conta no Mercado Livre e percebeu que o ícone de ‘Novo’ ao lado da opção ‘Vendas’ estava com uma diferente cor de destaque, enquanto outras opções não tinham nenhum tipo de diferenciação visual. Isso gerou confusão, pois o usuário não sabia se isso significava algo diferente ou se era apenas um estilo visual.",
         "options": [
-          "Prevenção de erros",
-          "Ajuda e documentação",
-          "Reconhecimento em vez de memorização",
-          "Visibilidade do status do sistema"
+          "Visibilidade do Status do Sistema",
+          "Consistência e Padrões",
+          "Controle e Liberdade do Usuário",
+          "Ajuda e Documentação"
         ],
-        "answer": "Ajuda e documentação"
+        "answer": "Consistência e Padrões",
+        "imageQuestion": "/problemas/mercado_livre_problema_1.png"
+      },
+      {
+        "id": 10,
+        "description": "O usuário estava visualizando um produto no Mercado Livre e percebeu que, além do campo de tamanho em branco, também não havia opções claras para controlar a quantidade de itens. Não era possível adicionar mais de um produto ao carrinho, nem havia a opção de excluir itens facilmente ou salvar a seleção para mais tarde.",
+        "options": [
+          "Controle e Liberdade do Usuário",
+          "Ajuda e Documentação",
+          "Estética e Design Minimalista",
+          "Prevenção de Erros"
+        ],
+        "answer": "Controle e Liberdade do Usuário",
+        "imageQuestion": "/problemas/mercado_livre_problema_2.png"
       },
       {
         "id": 11,
-        "description": "O site não possui um botão de sair, o que dificulta a saída do usuário.",
+        "description": "O usuário estava navegando na página de um produto e percebeu que as opções de tamanho e quantidade estavam descritas com termos extremamente técnicos e pouco usuais. Por exemplo, a opção de tamanho era chamada de 'Manual de Dimensões Corporais', e a quantidade do produto estava descrita como 'Quantificação do Produto Existente'. Esses termos são complicados e não fazem sentido para usuários leigos, dificultando a compreensão e tornando a experiência de compra mais confusa.",
         "options": [
-          "Controle e liberdade do usuário",
-          "Flexibilidade e eficiência de uso",
-          "Consistência e padrões",
-          "Reconhecimento em vez de memorização"
+          "Consistência e Padrões",
+          "Correspondência entre o Sistema e o Mundo Real",
+          "Controle e Liberdade do Usuário",
+          "Visibilidade do Status do Sistema"
         ],
-        "answer": "Controle e liberdade do usuário"
+        "answer": "Correspondência entre o Sistema e o Mundo Real",
+        "imageQuestion": "/problemas/mercado_livre_problema_3.png"
+      },
+      {
+        "id": 12,
+        "description": "O usuário tentou realizar a compra de um kit de camisas esportivas, mas recebeu uma mensagem de erro genérica: 'Erro ao realizar compra'. Não havia mais detalhes sobre o que realmente deu errado, e o usuário não sabia como resolver o problema. A falta de informações específicas ou sugestões sobre como corrigir a situação fez com que o usuário ficasse confuso e frustrado, sem saber o que fazer para concluir a compra.",
+        "options": [
+          "Prevenção de Erros",
+          "Ajuda aos Usuários para Reconhecer, Diagnosticar e Recuperar de Erros",
+          "Visibilidade do Status do Sistema",
+          "Estética e Design Minimalista"
+        ],
+        "answer": "Ajuda aos Usuários para Reconhecer, Diagnosticar e Recuperar de Erros",
+        "imageQuestion": "/problemas/mercado_livre_problema_4.png"
       }
     ],
-    "image": "transporte.jpg"
+    "image": "/logos/mercado_livre_logo_1.png"
+  },
+  {
+    "id": 4,
+    "name": "UOL E-mail pro",
+    "problems": [
+      {
+        "id": 13,
+        "description": "O usuário estava tentando enviar um e-mail, mas recebeu uma mensagem de erro dizendo 'Falha ao enviar \"Teste\"'. A mensagem não explicou claramente o que deu errado, deixando o usuário sem saber o que fazer para corrigir o erro. Além disso, não havia uma sugestão de como resolver o problema, nem uma explicação simples de qual foi a falha. Isso dificultou o diagnóstico do erro e a recuperação da ação, pois o usuário não sabia como prosseguir.",
+        "options": [
+          "Visibilidade do Status do Sistema",
+          "Ajuda aos Usuários para Reconhecer, Diagnosticar e Recuperar de Erros",
+          "Estética e Design Minimalista",
+          "Consistência e Padrões"
+        ],
+        "answer": "Ajuda aos Usuários para Reconhecer, Diagnosticar e Recuperar de Erros",
+        "imageQuestion": "/problemas/uol1.png"
+      },
+      {
+        "id": 14,
+        "description": "O usuário estava tentando fazer login, mas recebeu uma mensagem de erro dizendo 'E-mail ou senha inválidos'. Além de não saber qual dos dois estava errado, o usuário também não encontrou uma opção para recuperar a senha ou redefinir a senha. Não havia um link de 'Esqueci minha senha' ou qualquer forma de recuperação de conta. Isso fez o usuário se sentir ainda mais impotente, sem saber como corrigir o problema ou continuar.",
+        "options": [
+          "Controle e Liberdade do Usuário",
+          "Ajuda e Documentação",
+          "Estética e Design Minimalista",
+          "Visibilidade do Status do Sistema"
+        ],
+        "answer": "Controle e Liberdade do Usuário",
+        "imageQuestion": "/problemas/uol2.png"
+      },
+      {
+        "id": 15,
+        "description": "O usuário estava enviando um e-mail e, após a confirmação de envio com a mensagem 'Seu e-mail foi enviado', percebeu que havia cometido um erro no destinatário ou no conteúdo do e-mail. No entanto, não havia uma opção para desfazer ou cancelar o envio do e-mail.",
+        "options": [
+          "Controle e Liberdade do Usuário",
+          "Visibilidade do Status do Sistema",
+          "Ajuda e Documentação",
+          "Consistência e Padrões"
+        ],
+        "answer": "Controle e Liberdade do Usuário",
+        "imageQuestion": "/problemas/uol3.png"
+      },
+      {
+        "id": 16,
+        "description": "O usuário estava tentando enviar um e-mail com um anexo, mas não havia nenhum indicador claro sobre o status do envio. O sistema não mostrou se o e-mail estava sendo enviado ou se o anexo estava sendo carregado, deixando o usuário sem saber se a ação estava em andamento ou se havia algum erro. A falta de feedback visual fez o usuário sentir que estava no escuro, sem saber se a ação havia sido completada com sucesso.",
+        "options": [
+          "Visibilidade do Status do Sistema",
+          "Controle e Liberdade do Usuário",
+          "Ajuda e Documentação",
+          "Consistência e Padrões"
+        ],
+        "answer": "Visibilidade do Status do Sistema",
+        "imageQuestion": "/problemas/uol4.png"
+      }
+    ],
+    "image": "/logos/email_logo.png"
+  },
+  {
+    "id": 5,
+    "name": "Usisaúde",
+    "problems": [
+      {
+        "id": 17,
+        "description": "O usuário estava acessando o Portal de Serviços e tentou visualizar o demonstrativo de boletos. No entanto, o sistema não forneceu um indicador claro sobre o status do carregamento ou do processamento da informação. O usuário não sabia se os dados estavam sendo recuperados corretamente ou se o sistema estava aguardando alguma ação. A falta de feedback visual ou indicadores de progresso deixou o usuário confuso e sem saber se o sistema estava funcionando corretamente.",
+        "options": [
+          "Visibilidade do Status do Sistema",
+          "Controle e Liberdade do Usuário",
+          "Consistência e Padrões",
+          "Estética e Design Minimalista"
+        ],
+        "answer": "Visibilidade do Status do Sistema",
+        "imageQuestion": "/problemas/fsfx1.png"
+      },
+      {
+        "id": 18,
+        "description": "O usuário estava acessando o portal de upload de arquivos e notou que o botão 'Enviar' e o botão 'Voltar' estavam estilizados de maneiras diferentes. O botão de 'Enviar' estava em um tom cinza e o de 'Voltar' estava em um tom azul.",
+        "options": [
+          "Visibilidade do Status do Sistema",
+          "Estética e Design Minimalista",
+          "Consistência e Padrões",
+          "Controle e Liberdade do Usuário"
+        ],
+        "answer": "Consistência e Padrões",
+        "imageQuestion": "/problemas/fsfx2.png"
+      },
+      {
+        "id": 19,
+        "description": "O usuário estava tentando usar o localizador de beneficiários e, ao preencher o campo CPF, ele digitou dados incorretos ou não numéricos, como por exemplo letras ou símbolos. O sistema não validou o campo de forma adequada, permitindo que o usuário inserisse qualquer tipo de dado, o que gerou um erro na busca.",
+        "options": [
+          "Visibilidade do Status do Sistema",
+          "Prevenção de Erros",
+          "Controle e Liberdade do Usuário",
+          "Ajuda e Documentação"
+        ],
+        "answer": "Prevenção de Erros",
+        "imageQuestion": "/problemas/fsfx3.png"
+      },
+      {
+        "id": 20,
+        "description": "O usuário estava navegando no portal de serviços e, ao visualizar as informações do contrato, não conseguiu sair da seção ou voltar à página inicial de maneira fácil. O sistema não ofereceu uma opção clara de navegação ou logout. Para sair ou mudar de seção, o usuário teve que fechar o navegador e abri-lo novamente, o que não é uma experiência ideal.",
+        "options": [
+          "Controle e Liberdade do Usuário",
+          "Visibilidade do Status do Sistema",
+          "Prevenção de Erros",
+          "Consistência e Padrões"
+        ],
+        "answer": "Controle e Liberdade do Usuário",
+        "imageQuestion": "/problemas/fsfx4.png"
+      }
+    ],
+    "image": "/logos/portal_servicos_logo.webp"
   },
   {
     "id": 6,
-    "name": "Governo",
+    "name": "YouTube",
     "problems": [
       {
-        "id": 12,
-        "description": "O site não possui um botão de sair, o que dificulta a saída do usuário.",
+        "id": 21,
+        "description": "O usuário estava navegando no YouTube e percebeu que, no menu lateral, as opções como 'Início', 'Inscrições' e 'Histórico' estavam com fontes diferentes e tamanhos distintos, o que causou confusão.",
         "options": [
-          "Controle e liberdade do usuário",
-          "Flexibilidade e eficiência de uso",
-          "Consistência e padrões",
-          "Reconhecimento em vez de memorização"
+          "Estética e Design Minimalista",
+          "Consistência e Padrões",
+          "Visibilidade do Status do Sistema",
+          "Controle e Liberdade do Usuário"
         ],
-        "answer": "Controle e liberdade do usuário"
+        "answer": "Consistência e Padrões",
+        "imageQuestion": "/problemas/yt1.png"
       },
       {
-        "id": 13,
-        "description": "O site não informa o prazo de entrega dos produtos.",
+        "id": 22,
+        "description": "O usuário estava assistindo a um vídeo no YouTube, mas percebeu que havia falta de funcionalidades básicas, como a opção de acelerar o vídeo, passar para o próximo vídeo ou outras opções usuais de controle de mídia.",
         "options": [
-          "Visibilidade do status do sistema",
-          "Ajuda e documentação",
-          "Prevenção de erros",
-          "Reconhecimento em vez de memorização"
+          "Visibilidade do Status do Sistema",
+          "Controle e Liberdade do Usuário",
+          "Consistência e Padrões",
+          "Estética e Design Minimalista"
         ],
-        "answer": "Visibilidade do status do sistema"
+        "answer": "Controle e Liberdade do Usuário",
+        "imageQuestion": "/problemas/yt2.png"
+      },
+      {
+        "id": 23,
+        "description": "O usuário estava navegando no YouTube e encontrou vídeos listados com nomes de código como 'ACXF56954', 'FKHSBDI 5984' e outros, em vez de títulos claros e descritivos. Essa falta de descrição realista e comum dificultou a identificação dos vídeos, criando uma sensação de desconexão entre o que o usuário esperaria ver (títulos informativos) e o que estava realmente sendo apresentado. Isso pode gerar frustração, pois o usuário não consegue associar facilmente os títulos dos vídeos com o conteúdo real.",
+        "options": [
+          "Visibilidade do Status do Sistema",
+          "Controle e Liberdade do Usuário",
+          "Correspondência entre o Sistema e o Mundo Real",
+          "Prevenção de Erros"
+        ],
+        "answer": "Correspondência entre o Sistema e o Mundo Real",
+        "imageQuestion": "/problemas/yt3.png"
+      },
+      {
+        "id": 24,
+        "description": "O usuário estava assistindo a um vídeo no YouTube, mas não conseguiu ver claramente o tempo total do vídeo e o progresso da reprodução, pois a barra de tempo estava ausente ou oculta. Isso fez com que o usuário ficasse sem saber quanto tempo o vídeo tinha, se estava na metade ou se estava perto do final.",
+        "options": [
+          "Visibilidade do Status do Sistema",
+          "Controle e Liberdade do Usuário",
+          "Estética e Design Minimalista",
+          "Consistência e Padrões"
+        ],
+        "answer": "Visibilidade do Status do Sistema",
+        "imageQuestion": "/problemas/yt4.png"
       }
     ],
-    "image": "governo.jpg"
-  }
+    "image": "/logos/yt_logo.png"
+  }  
 ]

@@ -7,7 +7,6 @@ export default function useProblems() {
     const fetchProblems = async () => {
       const response = await fetch("/problemas.json");
       const data = await response.json();
-      console.log("data", data);
       setProblems(data);
     };
 

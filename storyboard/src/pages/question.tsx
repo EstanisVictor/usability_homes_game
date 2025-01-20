@@ -32,37 +32,27 @@ export default function Question() {
             )?.problems;
             if (empresaProblemas) {
                 setCompanyQuestions(empresaProblemas);
-
                 const answeredQuestions = [
                     ...getCorrectAnswers(),
                     ...getWrongAnswers()
                 ];
 
                 let randomProblem: IProblem;
-                console.log("Problemas respondidos: ", answeredQuestions);
 
                 if (answeredQuestions.length === 0) {
                     randomProblem = empresaProblemas[Math.floor(Math.random() * empresaProblemas.length)];
-                    console.log("Problema aleatório: ", randomProblem);
                     setQuestion(randomProblem);
                 } else {
-                    console.log("Verificando se o problema já foi respondido");
-
                     let verify = false;
 
                     while (!verify) {
                         randomProblem = empresaProblemas[Math.floor(Math.random() * empresaProblemas.length)];
 
-                        // Verifica se o problema foi respondido
                         const isAnswered = answeredQuestions.flatMap((aq) => aq.problems)
                             .some((p) => p.id === randomProblem.id);
 
-                        if (isAnswered) {
-                            console.log("Problema já respondido, tentando novamente: ", randomProblem);
-                            verify = false;
-                        } else {
+                        if (!isAnswered) {
                             setQuestion(randomProblem);
-                            console.log("Problema não respondido: ", randomProblem);
                             verify = true;
                         }
                     }
@@ -103,9 +93,7 @@ export default function Question() {
                 toast.error("Resposta errada!");
             }
 
-            setCompanyQuestions((prev) =>
-                prev.filter((q) => q !== question)
-            );
+            setCompanyQuestions((prev) => prev.filter((q) => q !== question));
 
             if (companyQuestions.length <= 1) {
                 toast.info(
@@ -126,32 +114,31 @@ export default function Question() {
 
     if (!question) {
         return (
-            <div className="h-screen flex items-center justify-center">
-                <p>Carregando problema...</p>
+            <div className="h-screen flex items-center justify-center bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-white">
+                <p className="text-lg">Carregando problema...</p>
             </div>
         );
     }
 
     return (
-        <div className="h-screen bg-gray-100 flex flex-col p-4">
-            <p className="mt-4 text-xl text-gray-700">
+        <div className="bg-gradient-to-r from-green-700 to-blue-600 text-white flex flex-col p-6">
+            <p className="mt-4 text-xl text-white">
                 Tempo restante: {Math.floor(timeLeft)} segundos
             </p>
-            <div className="h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+
+            <div className="flex flex-col items-center justify-center space-y-6">
                 <ToastContainer
                     className="toast-container"
                     position="top-center"
                 />
 
                 <img
-                    src={question.image || "/default-problem.png"}
+                    src={question.imageQuestion}
                     alt="Problema"
-                    className="w-96 h-auto mb-4"
+                    className="w-full sm:w-2/6 h-auto rounded-lg shadow-md"
                 />
-                <h1 className="text-3xl font-bold mb-2">
-                    {question.description}
-                </h1>
-                <div className="flex flex-col gap-2">
+                <p className="font-semibold w-3/4 text-justify">{question.description}</p>
+                <div className="w-full sm:w-3/4 flex flex-col gap-3">
                     {question.options.map((option, index) => (
                         <button
                             key={index}
@@ -159,10 +146,11 @@ export default function Question() {
                                 setSelectedOption(index);
                                 setNoSelectionMessage(null);
                             }}
-                            className={`px-4 py-2 rounded-md border ${selectedOption === index
-                                ? "bg-blue-500 text-white"
-                                : "bg-white"
-                                }`}
+                            className={`w-full px-6 py-3 rounded-lg font-semibold text-lg transition duration-200 ${
+                                selectedOption === index
+                                    ? "bg-blue-600 text-white"
+                                    : "bg-white text-blue-600 border-2 border-blue-600"
+                            } hover:bg-blue-700 hover:text-white`}
                         >
                             {option}
                         </button>
@@ -170,10 +158,11 @@ export default function Question() {
                 </div>
                 <button
                     onClick={handleSubmit}
-                    className={`mt-4 px-6 py-3 rounded-md ${isSubmitting
-                        ? "bg-gray-400 text-gray-700 cursor-not-allowed"
-                        : "bg-green-500 text-white hover:bg-green-600"
-                        }`}
+                    className={`mt-6 px-8 py-4 rounded-lg font-semibold text-lg transition duration-200 ${
+                        isSubmitting
+                            ? "bg-gray-500 text-gray-200 cursor-not-allowed"
+                            : "bg-green-600 text-white hover:bg-green-700"
+                    }`}
                     disabled={isSubmitting}
                 >
                     Confirmar
