@@ -1,0 +1,187 @@
+[
+  {
+    "id": 1,
+    "name": "Escola",
+    "problems": [
+      {
+        "id": 1,
+        "description": "A página de matrícula trava quando o aluno tenta enviar documentos em PDF.",
+        "options": [
+          "Controle e liberdade do usuário",
+          "Prevenção de erros",
+          "Design estético e minimalista",
+          "Flexibilidade e eficiência de uso"
+        ],  
+        "answer": "Prevenção de erros"
+      },
+      {
+        "id": 2,
+        "description": "O formulário de cadastro de alunos não informa quais campos são obrigatórios.",
+        "options": [
+          "Visibilidade do status do sistema",
+          "Prevenção de erros",
+          "Consistência e padrões",
+          "Ajuda e documentação"
+        ],
+        "answer": "Prevenção de erros"
+      },
+      {
+        "id": 3,
+        "description": "O menu principal está escondido atrás de vários cliques, dificultando o acesso a informações importantes.",
+        "options": [
+          "Reconhecimento em vez de memorização",
+          "Flexibilidade e eficiência de uso",
+          "Controle e liberdade do usuário",
+          "Visibilidade do status do sistema"
+        ],
+        "answer": "Reconhecimento em vez de memorização"
+      }
+    ],
+    "image": "escola.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Hospital",
+    "problems": [
+      {
+        "id": 4,
+        "description": "O site não possui confirmação de agendamento de consulta, o que causa confusão.",
+        "options": [
+          "Visibilidade do status do sistema",
+          "Ajuda e documentação",
+          "Prevenção de erros",
+          "Consistência e padrões"
+        ],
+        "answer": "Visibilidade do status do sistema"
+      },
+      {
+        "id": 5,
+        "description": "Não há botão para voltar na página de resultados de exames.",
+        "options": [
+          "Controle e liberdade do usuário",
+          "Flexibilidade e eficiência de uso",
+          "Consistência e padrões",
+          "Reconhecimento em vez de memorização"
+        ],
+        "answer": "Controle e liberdade do usuário"
+      }
+    ],
+    "image": "hospital.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Banco",
+    "problems": [
+      {
+        "id": 6,
+        "description": "O aplicativo não informa o motivo de um pagamento não ter sido aprovado.",
+        "options": [
+          "Prevenção de erros",
+          "Ajuda e documentação",
+          "Reconhecimento em vez de memorização",
+          "Visibilidade do status do sistema"
+        ],
+        "answer": "Ajuda e documentação"
+      },
+      {
+        "id": 7,
+        "description": "O site não possui um botão de sair, o que dificulta a saída do usuário.",
+        "options": [
+          "Controle e liberdade do usuário",
+          "Flexibilidade e eficiência de uso",
+          "Consistência e padrões",
+          "Reconhecimento em vez de memorização"
+        ],
+        "answer": "Controle e liberdade do usuário"
+      }
+    ],
+    "image": "banco.jpg"
+  },
+  {
+    "id": 4,
+    "name": "E-commerce",
+    "problems": [
+      {
+        "id": 8,
+        "description": "O site não informa o prazo de entrega dos produtos.",
+        "options": [
+          "Visibilidade do status do sistema",
+          "Ajuda e documentação",
+          "Prevenção de erros",
+          "Reconhecimento em vez de memorização"
+        ],
+        "answer": "Visibilidade do status do sistema"
+      },
+      {
+        "id": 9,
+        "description": "O botão de adicionar ao carrinho não é visível na página de produtos.",
+        "options": [
+          "Controle e liberdade do usuário",
+          "Flexibilidade e eficiência de uso",
+          "Consistência e padrões",
+          "Reconhecimento em vez de memorização"
+        ],
+        "answer": "Visibilidade do status do sistema"
+      }
+    ],
+    "image": "ecommerce.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Transporte",
+    "problems": [
+      {
+        "id": 10,
+        "description": "O aplicativo não informa o motivo de um pagamento não ter sido aprovado.",
+        "options": [
+          "Prevenção de erros",
+          "Ajuda e documentação",
+          "Reconhecimento em vez de memorização",
+          "Visibilidade do status do sistema"
+        ],
+        "answer": "Ajuda e documentação"
+      },
+      {
+        "id": 11,
+        "description": "O site não possui um botão de sair, o que dificulta a saída do usuário.",
+        "options": [
+          "Controle e liberdade do usuário",
+          "Flexibilidade e eficiência de uso",
+          "Consistência e padrões",
+          "Reconhecimento em vez de memorização"
+        ],
+        "answer": "Controle e liberdade do usuário"
+      }
+    ],
+    "image": "transporte.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Governo",
+    "problems": [
+      {
+        "id": 12,
+        "description": "O site não possui um botão de sair, o que dificulta a saída do usuário.",
+        "options": [
+          "Controle e liberdade do usuário",
+          "Flexibilidade e eficiência de uso",
+          "Consistência e padrões",
+          "Reconhecimento em vez de memorização"
+        ],
+        "answer": "Controle e liberdade do usuário"
+      },
+      {
+        "id": 13,
+        "description": "O site não informa o prazo de entrega dos produtos.",
+        "options": [
+          "Visibilidade do status do sistema",
+          "Ajuda e documentação",
+          "Prevenção de erros",
+          "Reconhecimento em vez de memorização"
+        ],
+        "answer": "Visibilidade do status do sistema"
+      }
+    ],
+    "image": "governo.jpg"
+  }
+]
