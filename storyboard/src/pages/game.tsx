@@ -131,13 +131,12 @@ export default function Game() {
     if (isGameOver) {
         return (
             <div className="relative h-screen bg-gradient-to-r from-blue-700 to-green-800 flex flex-col items-center justify-center gap-4 p-4">
-                {/* Animação de fogos de artifício */}
                 <Confetti
                     width={window.innerWidth}
                     height={window.innerHeight}
-                    recycle={false} // Apenas dispara uma vez
-                    numberOfPieces={500} // Número de pedaços do confete
-                    gravity={0.05} // Velocidade do confete caindo
+                    recycle={false}
+                    numberOfPieces={500}
+                    gravity={0.05}
                 />
 
                 <h2 className="text-4xl font-extrabold text-white animate-pulse">
@@ -168,12 +167,21 @@ export default function Game() {
 
     return (
         <div className="h-svh bg-gradient-to-r from-blue-700 to-green-800 flex flex-col items-center gap-6 p-6">
-            <button
-                onClick={handleResetGame}
-                className="px-8 py-3 bg-purple-600 text-white font-bold rounded-md hover:bg-purple-700 transition duration-300"
-            >
-                Reiniciar Jogo
-            </button>
+            <div className="mb-4">
+                <button
+                    onClick={handleResetGame}
+                    className="px-8 py-3 bg-purple-600 text-white font-bold rounded-md hover:bg-purple-700 transition duration-300"
+                >
+                    Reiniciar Jogo
+                </button>
+                <button
+                    onClick={() => router.push("/")}
+                    className="px-8 py-3 bg-green-600 text-white font-bold rounded-md hover:bg-green-700 transition duration-300 ml-4"
+                >
+                    Voltar ao Inicio
+                </button>
+            </div>
+
             <div
                 className="fixed top-4 left-4 w-52 h-52 bg-gradient-to-r from-green-500 to-blue-500 flex flex-col items-center justify-center rounded-lg shadow-lg text-white text-center border-4 border-white"
             >
